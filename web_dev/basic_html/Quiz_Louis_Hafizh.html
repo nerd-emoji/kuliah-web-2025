@@ -5,24 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
+        body {  
             font-family: Arial, sans-serif;
-
             background-color: #dcdcdc; 
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .bigbox {
+
+        .bigbox1 {
+            display: flex;
+            gap: 30px;
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 40px;    
+        }
+        
+        .firsthead {
+            color: #d36b3a;
+            font-size: 3.5rem;
+            font-weight: 50;
+            margin-bottom: 10px;
+            margin-top: 0;
+            font-family: 'Gill Sans', Arial, sans-serif;
+        }
+
+        .firstdesc {
+            margin-bottom: 25px;
+        }
+
+        .smallbox1 {
+            width: 250px;
+            background-color:#f2f2f2f3;
+            padding: 20px;
+            padding-top: 10px;
+
+        }
+        .bigbox2 {
             display: flex;
             gap: 30px;
             background-color: white;
             padding: 40px;
             border-radius: 10px;
-
         }
 
-        .box1 {
+        .smallbox2 {
             width: 250px;     
         }
 
@@ -30,8 +58,37 @@
 </head>
 <body>
 
-    <div class="bigbox">
-        <div class="box1">
+    <div class="bigbox1">
+        <div class="smallbox1">
+            <h3 class="firsthead">
+                $33M
+            </h3>
+            <p class="firstdesc">
+                Trackable revenue generated across our portfolio
+            </p>
+            <img id="" src="money.png" alt="Contrast Adjustment" style="width: 100px; height: auto;">
+        </div>
+        <div class="smallbox1">
+            <h3 class="firsthead">
+                220%
+            </h3>
+            <p class="firstdesc">
+                Average yearly growth rate across our clients
+            </p>
+            <img id="" src="nature.png" alt="Contrast Adjustment" style="width: 100px; height: auto;">
+        </div>        <div class="smallbox1">
+            <h3 class="firsthead">
+                4x
+            </h3>
+            <p class="firstdesc">
+                Increase in client creative output on average
+            </p>
+            <img id="" src="data-visualization.png" alt="Contrast Adjustment" style="width: 100px; height: auto;">
+        </div>
+    </div>
+
+    <div class="bigbox2">
+        <div class="smallbox2">
             <img id="" src="web-development.png" alt="Contrast Adjustment" style="width: 48px; height: auto;">
             <h3>
                 Developer
@@ -39,7 +96,7 @@
             <p style="color: grey;"> 
                 Open-source SDKs with industry-leading accuracy, simple documentation, flexible APIs, and turnkey integrations.            </p>
         </div>
-        <div class="box1">
+        <div class="smallbox2">
             <img id="" src="contrast-adjustment.png" alt="Contrast Adjustment" style="width: 48px; height: auto;">
             <h3>
                 Extensible
@@ -48,7 +105,7 @@
                 Build location-based experiences across the customer journey, from messaging to curbside pickup to address autocomplete.
             </p>
         </div>
-        <div class="box1">
+        <div class="smallbox2">
             <img id="" src="growth.png" alt="Contrast Adjustment" style="width: 48px; height: auto;">
             <h3>
                 Enterprise-ready
