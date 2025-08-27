@@ -1,13 +1,14 @@
 <html>
     <head>
         <title>prasmul</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
         <style>
             *{
                 font-family: Poppins, sans-serif;
                 margin: 0;
             }
             .topbar{
-                background: #0a3976;
+                background: #00376a;
                 color: #fff;
                 display: flex;
                 justify-content: space-between;
@@ -19,20 +20,40 @@
             .imagesflags{
                 display: flex;
                 gap: 8px;
+                margin-right: 26px;
+
+            .indivflags{
+                display: flex;
+                padding-right: 15px;
+                height: 70%;
+                width: auto;
+            }
+
             }
             .barlinks{
                 display: flex;
-                gap: 24px;
+                gap: 20px;
                 align-items: center;
-                color: gray;
+                font-size: 15px;
+
+            }
+            .barlinks a{
+                text-decoration: none;
+                color: #96a2b8;
+                transition: color 0.2s;
+
+
+            }
+            .barlinks a:hover{
+                color: white;
             }
             .othertopbar{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 flex-direction: row;
-                padding: 8px 32px;
-                height: 40px;
+                height: 92px;
+
             }
             .otherbarlink{
                 display: flex;
@@ -48,6 +69,18 @@
                 padding-left: 23px;
                 padding-right: 23px;
                 margin-left: 23px;
+                padding-top: 22px;
+                margin-top: -22px;
+                padding-bottom: 19px;
+                margin-bottom: -19px;
+            }
+            .logo{
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
             }
         </style>
     </head>
@@ -55,34 +88,34 @@
     <body>
         <div class="topbar">
             <div class="imagesflags">
-                <img src="indo.png" alt="Indonesian Flag" width="22">
-                <img src="eng.png" alt="English Flag" width="22">
+                <img class="indivflags" src="indo.png" alt="Indonesian Flag" width="22">
+                <img class="indivflags" src="eng.png" alt="English Flag" width="22">
             </div>
             <div class="barlinks">
-                <span>Mahasiswa</span>
-                <span>Staff</span>
-                <span>Alumni</span>
-                <span>VR Kampus Tur</span>
-                <span>MyPrasmul</span>
+                <a href="#mahasiswa">Mahasiswa</a>
+                <a href="#staff">Staff</a>
+                <a href="#alumni">Alumni</a>
+                <a href="#vr-kampus-tur">VR Kampus Tur</a>
+                <a href="#myprasmul">MyPrasmul</a>
                 <span class="registrasi">REGISTRASI</span>
             </div>
         </div>
         <div class="othertopbar">
             <div class="logo">
-                <img src="Logo-Universitas-Prasetiya-Mulya.png" alt="Logo Universitas" height="48">
+                <img src="Logo-Universitas-Prasetiya-Mulya.png" alt="Logo Universitas" width="223" height="auto">
             </div>
             <div class="otherbarlink">
-                <span>Mahasiswa</span>
-                <span>Staff</span>
-                <span>Alumni</span>
-                <span>VR Kampus Tur</span>
-                <span>MyPrasmul</span>
+                <span>Tentang</span>
+                <span>Admisi</span>
+                <span>Program</span>
+                <span>Kantor & Layanan</span>
+                <span>Kehidupan Kampus</span>
                 <span>Berita & Acara</span>
                 <span><img src="glass.png" alt="glass" width="20px"></span>
             </div>
 
         </div>
-        <div>
+        <div class="scrollimagecontainer">
             <img src="pasmulscroll.png" alt="Prasmul Scroll" width="100%">
         </div>
     </body>
