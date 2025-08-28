@@ -59,8 +59,22 @@
                 display: flex;
                 gap: 24px;
                 align-items: center;
-                color: darkblue;
+                font-weight: 600;
             }
+            .otherbarlink a{
+                text-decoration: none;
+                color: #1B417C;
+                transition: color 0.2s;
+                border-bottom: 6px solid transparent;
+
+
+            }
+            .otherbarlink a:hover{
+                color: #3DB166;
+                border-bottom: 6px solid #3DB166;
+
+            }
+
             .registrasi{
                 color: white;
                 background-color: #3db166;
@@ -68,7 +82,7 @@
                 font-weight: bold;
                 padding-left: 23px;
                 padding-right: 23px;
-                margin-left: 23px;
+                margin-left: 23px;  
                 padding-top: 22px;
                 margin-top: -22px;
                 padding-bottom: 19px;
@@ -78,8 +92,9 @@
                 display: flex;
                 align-items: center;
                 gap: 14px;
-                padding-top: 20px;
+                padding-top: 25px;
                 padding-bottom: 20px;
+                margin-left: 90px;
 
             }
         </style>
@@ -88,8 +103,8 @@
     <body>
         <div class="topbar">
             <div class="imagesflags">
-                <img class="indivflags" src="indo.png" alt="Indonesian Flag" width="22">
-                <img class="indivflags" src="eng.png" alt="English Flag" width="22">
+                <a href="#"><img class="indivflags" src="indo.png" alt="Indonesian Flag" width="22"></a>
+                <a href="#"><img class="indivflags" src="eng.png" alt="English Flag" width="22"></a>
             </div>
             <div class="barlinks">
                 <a href="#mahasiswa">Mahasiswa</a>
@@ -102,18 +117,17 @@
         </div>
         <div class="othertopbar">
             <div class="logo">
-                <img src="Logo-Universitas-Prasetiya-Mulya.png" alt="Logo Universitas" width="223" height="auto">
+                <a href="#"><img src="Logo-Universitas-Prasetiya-Mulya.png" alt="Logo Universitas" width="223" height="auto"></a>
             </div>
             <div class="otherbarlink">
-                <span>Tentang</span>
-                <span>Admisi</span>
-                <span>Program</span>
-                <span>Kantor & Layanan</span>
-                <span>Kehidupan Kampus</span>
-                <span>Berita & Acara</span>
-                <span><img src="glass.png" alt="glass" width="20px"></span>
+                <a href="#tentang">Tentang</a>
+                <a href="#admisi">Admisi</a>
+                <a href="#program">Program</a>
+                <a href="#kantor-layanan">Kantor & Layanan</a>
+                <a href="#kehidupan-kampus">Kehidupan Kampus</a>
+                <a href="#berita-acara">Berita & Acara</a>
+                <a style="margin-right: 85px;" href="#search"><img src="glass.png" alt="glass" width="25px"></a>
             </div>
-
         </div>
         <div class="scrollimagecontainer">
             <img src="pasmulscroll.png" alt="Prasmul Scroll" width="100%">
