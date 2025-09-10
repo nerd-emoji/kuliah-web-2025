@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ui-monospace, Arial, sans-serif;
+}
+
+body, html {
+  height: 100%;
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin: 0px;
+    font-weight: 400;
+    font-size: 2.125rem;
+    line-height: 1.235;
+    letter-spacing: 0.00735em;
+    font-family: Rubik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.description{
+  margin: 0px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+  color: rgb(108, 117, 125);
+  font-family: Rubik, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  flex: 1;
+  background: url("prasmulbg.jpg") no-repeat center center scroll;
+  background-size: cover;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.logo img {
+  width: 370px;   
+  height: auto;   
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;   
+  height: auto;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F1F2F2;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 350px;
+}
+
+.login-box h2 {
+  margin-bottom: 5px;
+}
+
+.login-box p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-70%);
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.forgot {
+  display: block;
+  text-align: right;
+  margin-bottom: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0B96FA;
+  text-decoration: none;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 20rem;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  border:12px;
+}
+
+.btn {
+  width: 100%;
+  background: #003E77;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.signup {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup a {
+  color: black;
+  text-decoration: underline;
+}
+
+.downnote {
+  font-size: 15px;
+  color: #555;
+}
+
+.downnote .bolded {
+  color: black;
+  font-weight: 300;
+}
