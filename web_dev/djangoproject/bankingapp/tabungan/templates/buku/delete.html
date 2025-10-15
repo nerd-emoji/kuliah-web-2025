@@ -1,0 +1,12 @@
+<div>
+    Nama: {{object.nama_nasabah}} <br>
+    No Rekening: {{object.nomor_rekening}} <br>
+    Alamat: {{object.alamat}} <br>
+    Kantor Cabang: {{object.kantor_bank}} <br>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Apakah anda yakin ingin menghapus data ini?</p>
+        <input type="submit" value="Yes"> &nbsp
+        <a href="/tabungan">No</a>
+    </form>
+</div>

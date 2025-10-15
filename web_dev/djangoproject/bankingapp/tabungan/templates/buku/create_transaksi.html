@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Transaksi - {{ buku.nama_nasabah }}</title>
+
+</head>
+<body>
+    <h1>Tambah Transaksi</h1>
+    
+    <div>
+        <h3>{{ buku.nama_nasabah }}</h3>
+        <p><strong>Nomor Rekening:</strong> {{ buku.nomor_rekening }}</p>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="jenis">Jenis Transaksi:</label>
+            <select name="jenis" id="jenis" required>
+                <option value="">Pilih Jenis Transaksi</option>
+                <option value="kredit">Kredit (Setoran)</option>
+                <option value="debit">Debit (Penarikan)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nominal">Nominal (Rp):</label>
+            <input type="number" name="nominal" id="nominal" step="0.01" min="0" required>
+        </div>
+
+        <button type="submit">Simpan Transaksi</button>
+        <a href="/tabungan/buku/detail_transaksi/{{ buku.id }}/" class="back-link">Batal</a>
+    </form>
+</body>
+</html>
