@@ -1,5 +1,5 @@
 """
-URL configuration for bankingapp project.
+URL configuration for tutorial project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -15,11 +15,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
+from rest_framework import routers
+from tutorial.quickstart import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
+router.register(r'prodi', views.ProdiViewSet)
+router.register(r'siswa', views.SiswaViewSet)
+router.register(r'kuliah', views.KuliahViewSet)
+router.register(r'registrasi', views.RegistrasiViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("tabungan/", include("tabungan.urls")),
-    path('api-auth/', include('rest_framework.urls')),
-
+    path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

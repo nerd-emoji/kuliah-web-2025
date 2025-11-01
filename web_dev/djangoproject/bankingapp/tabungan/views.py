@@ -7,10 +7,7 @@ from tabungan.models import Buku, Transaksi
 
 # Create your views here.
 def list_buku(request):
-    #query data ke db
-    list_buku = Buku.objects.all() #mengambil semua data buku
-    # print('lihat data buku:')
-    # print(list_buku) #cek di terminal
+    list_buku = Buku.objects.all() 
     data = {'list_buku': list_buku}
     return render(request, "buku/list.html", data)
 
@@ -37,14 +34,11 @@ def update_buku(request, buku_id):
     return render(request, "buku/update.html", context)
 
 def delete_buku(request, buku_id):
-    # print(buku_id)
     object = get_object_or_404(Buku, id = buku_id)
-    # print(object)
     if request.method == "POST":
         object.delete()
         return HttpResponseRedirect(reverse('tabungan:list-buku'))
     context = {'object': object}
-    # object['object'] = object
     return render(request, "buku/delete.html", context)
 
 def detail_transaksi(request, buku_id):
