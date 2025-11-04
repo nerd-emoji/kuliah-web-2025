@@ -20,8 +20,6 @@ from rest_framework import routers
 from tutorial.quickstart import views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
 router.register(r'prodi', views.ProdiViewSet)
 router.register(r'siswa', views.SiswaViewSet)
 router.register(r'kuliah', views.KuliahViewSet)
@@ -29,6 +27,14 @@ router.register(r'registrasi', views.RegistrasiViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    path('api/siswa/prodi/<str:prodi_nama>/', views.SiswaByProdiList.as_view()),
+    path('api/siswa/kaprodi/<str:kaprodi_nama>/', views.SiswaByKaprodiList.as_view()),
+    path('api/registrasi/siswa/<str:siswa_nama>/', views.RegistrasiBySiswaList.as_view()),
+    path('api/registrasi/kuliah/<str:kuliah_matkul>/', views.RegistrasiByKuliahList.as_view()),
+    path('api/registrasi/kaprodi/<str:kaprodi_nama>/', views.RegistrasiByKaprodiList.as_view()),
+    path('api/kuliah/kaprodi/<str:kaprodi_nama>/', views.KuliahByKaprodiList.as_view()),
+    path('api/kuliah/prodi/<str:prodi_nama>/', views.KuliahByProdiList.as_view()),
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

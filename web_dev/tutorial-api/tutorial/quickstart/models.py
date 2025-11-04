@@ -19,7 +19,7 @@ class Siswa(models.Model):
 
 class Kuliah(models.Model):
     matkul = models.CharField(max_length=100)
-    prodi = models.ForeignKey(Prodi, on_delete=models.CASCADE)
+    prodi = models.ForeignKey(Prodi, on_delete=models.CASCADE, related_name='kuliahs')
     hari = models.CharField(max_length=20)
     sks = models.IntegerField()
 
